@@ -66,7 +66,6 @@ const images = [
 
 
 const gallery = document.querySelector('.gallery');
-
 function createGalleryItemMarkup(image) {
   return `
     <li class="gallery-item">
@@ -81,22 +80,17 @@ function createGalleryItemMarkup(image) {
     </li>
   `;
 }
-
 const galleryMarkup = images.map(createGalleryItemMarkup).join('');
-
 gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 
-gallery.addEventListener('click', onGalleryClick);
 
+gallery.addEventListener('click', onGalleryClick);
 function onGalleryClick(event) {
   event.preventDefault();
-
   if (event.target.nodeName !== 'IMG') {
     return;
   }
-
   const originalImageUrl = event.target.dataset.source;
-
   console.log(originalImageUrl);
 }
 
