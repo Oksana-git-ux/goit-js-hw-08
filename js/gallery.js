@@ -85,17 +85,6 @@ gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 
 
 gallery.addEventListener('click', onGalleryClick);
-function onGalleryClick(event) {
-  event.preventDefault();
-  if (event.target.nodeName !== 'IMG') {
-    return;
-  }
-  const originalImageUrl = event.target.dataset.source;
-  console.log(originalImageUrl);
-}
-
-
-gallery.addEventListener('click', onGalleryClick);
 
 function onGalleryClick(event) {
   event.preventDefault();
